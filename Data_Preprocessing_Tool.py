@@ -9,6 +9,11 @@ y = dataset.iloc[:,-1].values  #Dependent values
 print(x)
 print(y)
 
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(missing_values==np.nan, strategy='mean')
+imputer.fit(X[:,1:3])
+
+
 
 
 
